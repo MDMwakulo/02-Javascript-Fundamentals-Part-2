@@ -31,7 +31,7 @@ console.log(appleOrangeJuice);*/
 
 // Function Declaration and Expression
 // this is function declaration
-function calcAge1(birthYear) {
+/*function calcAge1(birthYear) {
 	return 2037 - birthYear;
 }
 
@@ -56,4 +56,39 @@ const yearsUntilretirement = (birthYear, firstName) => {
 };
 
 console.log(yearsUntilretirement(1997, 'Durell'));
-console.log(yearsUntilretirement(1990, 'Bob'));
+console.log(yearsUntilretirement(1990, 'Bob'));*/
+
+// Functions calling other functions
+/*function cutFruitPieces(fruit) {
+	return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+	const applePieces = cutFruitPieces(apples);
+	const orangePieces = cutFruitPieces(oranges);
+	console.log(apples, oranges);
+	const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+	return juice;
+}
+
+console.log(fruitProcessor(2, 3));*/
+
+// Reviewing Functions
+const calcAge = function(birthYear) {
+	return 2023 - birthYear;
+};
+
+const yearsUntilretirement = function(birthYear, firstName) {
+	const age = calcAge(birthYear);
+	const retirement = 65 - age;
+
+	if (retirement >= 0) {
+		console.log(`${firstName} retires in ${retirement} years.`);
+		return retirement;
+	} else {
+		console.log(`${firstName} has already retired 🎉`);
+		return -1;
+	}
+};
+console.log(yearsUntilretirement(1997, 'Durell'));
+console.log(yearsUntilretirement(1950, 'Noah'));
