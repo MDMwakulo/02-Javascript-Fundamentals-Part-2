@@ -74,7 +74,7 @@ function fruitProcessor(apples, oranges) {
 console.log(fruitProcessor(2, 3));*/
 
 // Reviewing Functions
-const calcAge = function(birthYear) {
+/*const calcAge = function(birthYear) {
 	return 2023 - birthYear;
 };
 
@@ -91,4 +91,28 @@ const yearsUntilretirement = function(birthYear, firstName) {
 	}
 };
 console.log(yearsUntilretirement(1997, 'Durell'));
-console.log(yearsUntilretirement(1950, 'Noah'));
+console.log(yearsUntilretirement(1950, 'Noah'));*/
+
+// Coding Challenge 1
+const calcAverage = (x, y, z) => Math.floor((x + y + z) / 3);
+
+const checkWinner = function(d1, d2, d3, k1, k2, k3) {
+	const averageDolphins = calcAverage(d1, d2, d3);
+	const averageKoalas = calcAverage(k1, k2, k3);
+
+	if (averageDolphins / averageKoalas >= 2 || averageKoalas / averageDolphins >= 2) {
+		const winningTeam =
+			averageDolphins > averageKoalas
+				? `Dolphin win 🏆 (${averageDolphins} vs. ${averageKoalas})`
+				: `Koalas win 🏆 (${averageKoalas} vs. ${averageDolphins})`;
+		return winningTeam;
+	} else {
+		return `No team wins...`;
+	}
+};
+
+// test 1
+console.log(checkWinner(44, 23, 71, 65, 54, 49));
+// test 2
+console.log(checkWinner(85, 54, 41, 23, 34, 27));
+console.log(checkWinner(26, 1, 1, 65, 54, 49));
