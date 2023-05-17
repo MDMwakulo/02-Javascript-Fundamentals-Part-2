@@ -200,11 +200,82 @@ const total = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
 console.log(bill, tips, total);*/
 
 // Introduction to Objects
-
-const durell = {
+/*const durell = {
 	firstName: 'Jonas',
 	lastName: 'Mwakulo',
 	age: 2023 - 1997,
 	job: 'student',
 	friends: ['Michael', 'Peter', 'Steven']
+};*/
+
+// Dot vs. Bucket Notation
+/*const durell = {
+	firstName: 'Durell',
+	lastName: 'Mwakulo',
+	age: 2023 - 1997,
+	job: 'student',
+	friends: ['Michael', 'Peter', 'Steven']
 };
+
+console.log(durell.lastName);
+console.log(durell['lastName']);
+
+const nameKey = 'Name';
+
+console.log(durell['first' + nameKey]);
+console.log(durell['last' + nameKey]);
+
+const interestedIn = prompt(
+	'What do you want to know about Durell? Choose between firstName, lastName, age, job, and friends'
+);
+
+if (durell[interestedIn]) {
+	console.log(durell[interestedIn]);
+} else {
+	console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
+}
+
+durell.location = 'Kenya';
+durell['twitter'] = '@dmwakulo';
+console.log(durell);
+
+console.log(
+	`${durell.firstName} has ${durell.friends.length} friends, and his best friend is called ${durell.friends[0]}`
+);*/
+
+// Object Methods
+const durell = {
+	firstName: 'Durell',
+	lastName: 'Mwakulo',
+	birthYear: 1997,
+	job: 'student',
+	friends: ['Michael', 'Peter', 'Steven'],
+	hasDriversLIcense: false,
+
+	// calcAge: function(birthYear) {
+	// 	return 2023 - birthYear;
+	// }
+
+	// calcAge: function() {
+	// 	return 2023 - this.birthYear;
+	// }
+
+	calcAge: function() {
+		return (this.age = 2023 - this.birthYear);
+	},
+	getSummary: function() {
+		return (this.summary = `${this.firstName} is a ${this.calcAge()}-year old student, and he has ${this
+			.hasDriversLIcense
+			? 'a'
+			: 'no'} driver's license.`);
+	}
+};
+console.log(durell.calcAge());
+console.log(durell.age);
+console.log(durell.age);
+console.log(durell.age);
+
+// Challenge
+console.log(durell.getSummary());
+console.log(durell.summary);
+console.log(durell['getSummary']());
