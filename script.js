@@ -308,17 +308,53 @@ console.log(
 );*/
 
 // Iteration: The for Loop
-// console.log('Lifting weights repetition 1 🏋️‍♀️');
-// console.log('Lifting weights repetition 2 🏋️‍♀️');
-// console.log('Lifting weights repetition 3 🏋️‍♀️');
-// console.log('Lifting weights repetition 4 🏋️‍♀️');
-// console.log('Lifting weights repetition 5 🏋️‍♀️');
-// console.log('Lifting weights repetition 6 🏋️‍♀️');
-// console.log('Lifting weights repetition 7 🏋️‍♀️');
-// console.log('Lifting weights repetition 8 🏋️‍♀️');
-// console.log('Lifting weights repetition 9 🏋️‍♀️');
-// console.log('Lifting weights repetition 10 🏋️‍♀️');
+/*console.log('Lifting weights repetition 1 🏋️‍♀️');
+console.log('Lifting weights repetition 2 🏋️‍♀️');
+console.log('Lifting weights repetition 3 🏋️‍♀️');
+console.log('Lifting weights repetition 4 🏋️‍♀️');
+console.log('Lifting weights repetition 5 🏋️‍♀️');
+console.log('Lifting weights repetition 6 🏋️‍♀️');
+console.log('Lifting weights repetition 7 🏋️‍♀️');
+console.log('Lifting weights repetition 8 🏋️‍♀️');
+console.log('Lifting weights repetition 9 🏋️‍♀️');
+console.log('Lifting weights repetition 10 🏋️‍♀️');
 
 for (let rep = 1; rep <= 10; rep++) {
 	console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+}*/
+
+// Looping Arrays, Breaking and Continuing
+const durell = ['Jonas', 'Mwakulo', 2023 - 1997, 'student', ['Michael', 'Peter', 'Steven'], true];
+console.log(durell);
+console.log('===================================');
+const typeOf = [];
+for (let i = 0; i < durell.length; i++) {
+	typeOf.push(typeof durell[i]);
+	console.log(durell[i], typeof durell[i]);
+}
+console.log('===================================');
+console.log(typeOf);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+	ages.push(`${2037 - years[i]} years`);
+}
+console.log('===================================');
+console.log(ages);
+console.log('----------------ONLY STRINGS----------------');
+
+// Continue
+for (let i = 0; i < durell.length; i++) {
+	if (typeof durell[i] !== 'string') continue;
+	console.log(durell[i], typeof durell[i]);
+}
+
+console.log('----------------BREAK WITH NUMBER----------------');
+//  break
+for (let i = 0; i < durell.length; i++) {
+	if (typeof durell[i] !== 'number') continue;
+	console.log(durell[i], typeof durell[i]);
+	if (typeof durell[i] === 'number') break;
 }
