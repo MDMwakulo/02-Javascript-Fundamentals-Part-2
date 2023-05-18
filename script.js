@@ -281,7 +281,7 @@ console.log(durell.summary);
 console.log(durell['getSummary']());*/
 
 // Coding Challenge 3
-const mark = {
+/*const mark = {
 	firstName: 'Mark',
 	lastName: 'Miller',
 	mass: 78,
@@ -305,4 +305,20 @@ console.log(
 	mark.calcBMI() > john.calcBMI()
 		? `${mark.firstName}'s BMI (${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi})`
 		: `${john.firstName}'s BMI (${john.bmi}) is higher than ${mark.firstName}'s (${mark.bmi})`
-);
+);*/
+
+// Iteration: The for Loop
+// console.log('Lifting weights repetition 1 🏋️‍♀️');
+// console.log('Lifting weights repetition 2 🏋️‍♀️');
+// console.log('Lifting weights repetition 3 🏋️‍♀️');
+// console.log('Lifting weights repetition 4 🏋️‍♀️');
+// console.log('Lifting weights repetition 5 🏋️‍♀️');
+// console.log('Lifting weights repetition 6 🏋️‍♀️');
+// console.log('Lifting weights repetition 7 🏋️‍♀️');
+// console.log('Lifting weights repetition 8 🏋️‍♀️');
+// console.log('Lifting weights repetition 9 🏋️‍♀️');
+// console.log('Lifting weights repetition 10 🏋️‍♀️');
+
+for (let rep = 1; rep <= 10; rep++) {
+	console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+}
