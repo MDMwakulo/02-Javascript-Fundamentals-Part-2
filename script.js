@@ -244,7 +244,7 @@ console.log(
 );*/
 
 // Object Methods
-const durell = {
+/*const durell = {
 	firstName: 'Durell',
 	lastName: 'Mwakulo',
 	birthYear: 1997,
@@ -278,4 +278,31 @@ console.log(durell.age);
 // Challenge
 console.log(durell.getSummary());
 console.log(durell.summary);
-console.log(durell['getSummary']());
+console.log(durell['getSummary']());*/
+
+// Coding Challenge 3
+const mark = {
+	firstName: 'Mark',
+	lastName: 'Miller',
+	mass: 78,
+	height: 1.69,
+	calcBMI: function() {
+		return (this.bmi = Math.floor(this.mass / this.height ** 2));
+	}
+};
+
+const john = {
+	firstName: 'John',
+	lastName: 'Smith',
+	mass: 92,
+	height: 1.95,
+	calcBMI: function() {
+		return (this.bmi = Math.floor(this.mass / this.height ** 2));
+	}
+};
+
+console.log(
+	mark.calcBMI() > john.calcBMI()
+		? `${mark.firstName}'s BMI (${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi})`
+		: `${john.firstName}'s BMI (${john.bmi}) is higher than ${mark.firstName}'s (${mark.bmi})`
+);
