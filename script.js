@@ -377,7 +377,7 @@ for (let exercise = 1; exercise <= 3; exercise++) {
 }*/
 
 // The while Loop
-for (let rep = 1; rep <= 10; rep++) {
+/*for (let rep = 1; rep <= 10; rep++) {
 	console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
 }
 console.log(`--------WHILE LOOP--------`);
@@ -394,4 +394,31 @@ while (dice !== 6) {
 	dice = Math.trunc(Math.random() * 6) + 1;
 
 	if (dice === 6) console.log('Loop has ended...');
+}*/
+
+// Coding Challenge 4
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52],
+	tips = [],
+	totals = [];
+const calcTip = (bill) => (bill >= 50 && bill <= 100 ? bill * 0.15 : bill * 0.2);
+
+for (let i = 0; i < bills.length; i++) {
+	const tip = calcTip(bills[i]);
+	const total = bills[i] + tip;
+	tips.push(tip);
+	totals.push(total);
 }
+
+console.log(bills, tips, totals);
+
+const calcAverage = function(arr) {
+	let sum = 0;
+	for (let i = 0; i < arr.length; i++) {
+		sum += arr[i];
+	}
+	return sum / arr.length;
+};
+
+console.log(calcAverage(bills));
+console.log(calcAverage(totals));
+console.log(calcAverage([5, 5]));
