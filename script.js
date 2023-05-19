@@ -360,7 +360,7 @@ for (let i = 0; i < durell.length; i++) {
 }*/
 
 // Looping Backwards and loops in Loops
-const durell = ['Jonas', 'Mwakulo', 2023 - 1997, 'student', ['Michael', 'Peter', 'Steven'], true];
+/*const durell = ['Jonas', 'Mwakulo', 2023 - 1997, 'student', ['Michael', 'Peter', 'Steven'], true];
 
 for (let i = durell.length - 1; i >= 0; i--) {
 	console.log(i, durell[i]);
@@ -374,4 +374,24 @@ for (let exercise = 1; exercise <= 3; exercise++) {
 	for (let rep = 1; rep < 6; rep++) {
 		console.log(`Exercise ${exercise}: Lifting weights repetition ${rep} 🏋️‍♂️.`);
 	}
+}*/
+
+// The while Loop
+for (let rep = 1; rep <= 10; rep++) {
+	console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+}
+console.log(`--------WHILE LOOP--------`);
+let rep = 1;
+while (rep <= 10) {
+	console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+	rep++;
+}
+
+console.log(`--------DICE ROLLS--------`);
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+	console.log(`You rolled a ${dice}`);
+	dice = Math.trunc(Math.random() * 6) + 1;
+
+	if (dice === 6) console.log('Loop has ended...');
 }
