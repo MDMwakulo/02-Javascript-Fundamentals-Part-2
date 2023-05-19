@@ -324,7 +324,7 @@ for (let rep = 1; rep <= 10; rep++) {
 }*/
 
 // Looping Arrays, Breaking and Continuing
-const durell = ['Jonas', 'Mwakulo', 2023 - 1997, 'student', ['Michael', 'Peter', 'Steven'], true];
+/*const durell = ['Jonas', 'Mwakulo', 2023 - 1997, 'student', ['Michael', 'Peter', 'Steven'], true];
 console.log(durell);
 console.log('===================================');
 const typeOf = [];
@@ -357,4 +357,21 @@ for (let i = 0; i < durell.length; i++) {
 	if (typeof durell[i] !== 'number') continue;
 	console.log(durell[i], typeof durell[i]);
 	if (typeof durell[i] === 'number') break;
+}*/
+
+// Looping Backwards and loops in Loops
+const durell = ['Jonas', 'Mwakulo', 2023 - 1997, 'student', ['Michael', 'Peter', 'Steven'], true];
+
+for (let i = durell.length - 1; i >= 0; i--) {
+	console.log(i, durell[i]);
+}
+
+console.log('===================================');
+
+for (let exercise = 1; exercise <= 3; exercise++) {
+	console.log(`------------ EXERCISE ${exercise}`);
+
+	for (let rep = 1; rep < 6; rep++) {
+		console.log(`Exercise ${exercise}: Lifting weights repetition ${rep} 🏋️‍♂️.`);
+	}
 }
